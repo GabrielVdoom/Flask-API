@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adicionar Usuário</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            padding: 100px;
+            margin-top: 80px;
+        }
+
+        fieldset {
+            border: 2px solid #4CAF50;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #fff;
+            max-width: 300px;
+            margin: auto;
+        }
+
+        legend {
+            font-weight: bold;
+            font-size: 1.2em;
+            padding: 0 10px;
+            color: #4CAF50;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        .btn-container {
+            max-width: 200px;
+            margin: 50px auto 0;
+
+        }
+
+        .btn-down {
+            max-width: 170px;
+            margin: 50px auto 0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <form action="/add_user" method="post">
+        <fieldset>
+            <legend>Cadastro de Usuário</legend>
+
+            <label>Nome:</label>
+            <input type="text" name="name" required>
+
+            <label>Senha:</label>
+            <input type="password" name="password" required>
+
+            <button type="submit">Cadastrar</button>
+        </fieldset>
+    </form>
+
+    <div class="btn-container">
+        <a href="/login" class="btn">Não possui Cadastro? Fazer Login</a>
+    </div>
+
+    <div class="btn-down">
+            <a href="/users_list_html" >Ir para lista de usuários</a>
+    </div>
+</body>
+</html>

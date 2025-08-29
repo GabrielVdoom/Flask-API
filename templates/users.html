@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Usuários</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            padding: 200px;
+        }
+
+        fieldset {
+            border: 2px solid #4CAF50;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #fff;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        legend {
+            font-weight: bold;
+            font-size: 1.2em;
+            padding: 0 10px;
+            color: #4CAF50;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #e8f5e9;
+            margin: 8px 0;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #c8e6c9;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        .btn-container {
+            max-width: 200px;
+            margin: 50px auto 0;
+
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Usuários</legend>
+        <ul>
+            {% for user in users %}
+                <li>ID: {{ user.id }} - Nome: {{ user.name }}</li>
+            {% endfor %}
+        </ul>
+    </fieldset>
+
+    <div class="btn-container">
+        <a href="/add_user" class="btn">Cadastrar Novo Usuário</a>
+    </div>
+</body>
+</html>
